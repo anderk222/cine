@@ -52,7 +52,7 @@ export class WritersComponent implements OnInit {
         message: `Esta funcionalidad no esta
           disponible para usuarios que no
           estan logueados.
-          Desea ir al a la pagina de login?`
+          Desea ir a la pagina de login?`
       }
     });
 
