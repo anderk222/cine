@@ -1,0 +1,75 @@
+<div class="flex flex-col justify-between h-full">
+    <ul class="list-none w-full h-full flex flex-col p-2  gap-2">
+
+        <li [ngClass]="{'side-item' : authenticated}" class="side-item w-full">
+            <div *ngIf="!authenticated; else partner" class="text-black text-center">No authenticated</div>
+            <ng-template #partner>
+
+                <span class="one font-semibold text-neutral-400">
+                    AM
+                </span>
+                <div class="two">
+                    <p class="text-sm leading-none font-medium">{{user.name}}</p>
+                    <p class="text-xs leading-none ">{{user.email}}</p>
+                </div>
+
+                <div class="three"></div>
+            </ng-template>
+
+        </li>
+        <div class="border-b-[2px] border-b-neutral-400 "></div>
+
+        <li routerLink="/layout/author" class="w-full animate-item flex gap-2 p-2 items-center cursor-pointer">
+            <span class="">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="text-neutral-600 bi bi-person-heart" viewBox="0 0 16 16">
+                    <path
+                        d="M9 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm-9 8c0 1 1 1 1 1h10s1 0 1-1-1-4-6-4-6 3-6 4Zm13.5-8.09c1.387-1.425 4.855 1.07 0 4.277-4.854-3.207-1.387-5.702 0-4.276Z" />
+                </svg>
+            </span>
+            <span class="two text-sm font-medium">Escritores</span>
+
+        </li>
+
+        <li  routerLink="/layout/favorite" class="w-full animate-item flex gap-2 p-2 items-center cursor-pointer">
+            <span class="">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="text-red-400 bi bi-heart-fill" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
+                </svg>
+            </span>
+            <span class="two text-sm font-medium">Favoritos</span>
+        </li>
+
+    </ul>
+
+    <ul class="list-none w-full flex flex-col p-2  ">
+
+        <li *ngIf="authenticated" (click)="logout()"
+            class="w-full animate-item flex gap-2 p-2 items-center cursor-pointer">
+            <span class="">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="text-amber-900 bi bi-door-open-fill" viewBox="0 0 16 16">
+                    <path
+                        d="M1.5 15a.5.5 0 0 0 0 1h13a.5.5 0 0 0 0-1H13V2.5A1.5 1.5 0 0 0 11.5 1H11V.5a.5.5 0 0 0-.57-.495l-7 1A.5.5 0 0 0 3 1.5V15H1.5zM11 2h.5a.5.5 0 0 1 .5.5V15h-1V2zm-2.5 8c-.276 0-.5-.448-.5-1s.224-1 .5-1 .5.448.5 1-.224 1-.5 1z" />
+                </svg>
+            </span>
+            <span class="two text-sm font-medium">Cerrar sesion</span>
+        </li>
+
+        <li *ngIf="!authenticated" routerLink="/auth"
+            class="w-full animate-item flex gap-2 p-2 items-center cursor-pointer">
+            <span class="">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="text-amber-900 bi bi-door-open-fill" viewBox="0 0 16 16">
+                    <path
+                        d="M1.5 15a.5.5 0 0 0 0 1h13a.5.5 0 0 0 0-1H13V2.5A1.5 1.5 0 0 0 11.5 1H11V.5a.5.5 0 0 0-.57-.495l-7 1A.5.5 0 0 0 3 1.5V15H1.5zM11 2h.5a.5.5 0 0 1 .5.5V15h-1V2zm-2.5 8c-.276 0-.5-.448-.5-1s.224-1 .5-1 .5.448.5 1-.224 1-.5 1z" />
+                </svg>
+            </span>
+            <span class="two text-sm font-medium">Inciar sesion</span>
+        </li>
+
+    </ul>
+
+</div>
