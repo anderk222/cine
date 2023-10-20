@@ -1,10 +1,8 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'writers-root',
+  selector: 'cine-root',
   templateUrl: './root.component.html',
   styleUrls: ['./root.component.css']
 })
-export class RootComponent {
-
-}
+export class RootComponent { }

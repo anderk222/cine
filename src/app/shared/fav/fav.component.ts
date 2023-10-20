@@ -2,7 +2,7 @@ import { NgIf } from '@angular/common';
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
-  selector: 'writers-fav',
+  selector: 'cine-fav',
   templateUrl: './fav.component.html',
   styleUrls: ['./fav.component.css'],
   standalone: true,

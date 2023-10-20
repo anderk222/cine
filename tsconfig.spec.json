@@ -8,7 +8,7 @@
     ]
   },
   "paths": {
-    "@writers/*" : ["./src/app/*"]
+    "@cine/*" : ["./src/app/*"]
   },
   "include": [
     "src/**/*.spec.ts",

@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 import { AuthService } from 'src/app/auth/service/auth.service';
 
 @Component({
-  selector: 'writers-sidebar',
+  selector: 'cine-sidebar',
   templateUrl: './sidebar.component.html',
   styleUrls: ['./sidebar.component.css']
 })

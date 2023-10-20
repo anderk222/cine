@@ -7,27 +7,18 @@ const routes: Route[] = [
     {
         path: '',
         component: RootComponent,
+
         children: [
             {
-                path: 'author',
-                loadChildren: () => import('../feature/writer/writer.module')
-                    .then((file => file.WriterModule))
-            },
-            {
-                path: 'favorite',
-                loadChildren: () => import('../feature/favorite/favorite.module')
-                    .then(file => file.FavoriteModule)
-            },
-            {
-                path: 'title',
-                loadChildren: () => import('../feature/title/title.module')
-                    .then(file => file.TitleModule)
+                path: 'pelicula',
+                loadChildren: () => import('@cine/feature/pelicula/pelicula.module')
+                    .then(file => file.PeliculaModule)
             }
+
         ],
     },
 
 ]
-
 
 @NgModule({
     imports: [RouterModule.forChild(routes)],

@@ -2,7 +2,7 @@ import { Component, Inject } from '@angular/core';
 import { MAT_DIALOG_DATA, MatDialogModule } from '@angular/material/dialog';
 
 @Component({
-  selector: 'writers-dialog',
+  selector: 'cine-dialog',
   templateUrl: './dialog.component.html',
   styleUrls: ['./dialog.component.css'],
   standalone : true,

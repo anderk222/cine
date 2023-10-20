@@ -1,0 +1,82 @@
+<div class=" w-fit p-0">
+
+    <button (click)="open=true" class="bg-neutral-700 rounded-sm shadow-element px-2 font-semibold h-[29px] text-white">
+        Nueva Pelicula
+    </button>
+
+    <div (click)="open=false" #filtros *ngIf="open"
+        class="fixed flex justify-center text-white items-center top-0 left-0 w-full h-screen bg-black bg-opacity-60">
+        <form (click)="$event.stopPropagation()" class="bg-neutral-900 w-[32rem] p-2 flex flex-col">
+            <h3 class="p-0 leading-3">Crear Pelicula</h3>
+
+            <!-- <div [ngClass]="{'text-red-500': name.invalid &&  (name.dirty || name.touched)}" -->
+            <div class="flex flex-col text-blue-500 w-full">
+                <label>Nombre</label>
+                <!-- <input
+                    [ngClass]="{'border-red-500': name.invalid &&  (name.dirty || name.touched)}" -->
+                <input class="border p-2 border-blue-500 rounded-sm bg-transparent focus:outline-none h-fit"
+                    placeholder="type here" type="text">
+                <!-- <div class="text-xs mb-1" *ngIf="name.invalid && (name.dirty || name.touched)">
+
+                    <div *ngIf="name.errors?.['minlength']">
+                        Nombre debe tener al menos 2 caracteres.
+                    </div>
+
+                    <div *ngIf="name.errors?.['required']">
+                        El nombre es requerido.
+                    </div>
+                </div> -->
+            </div>
+
+            <!-- <div [ngClass]="{'text-red-500': name.invalid &&  (name.dirty || name.touched)}" -->
+            <div class="flex flex-col text-blue-500 w-full">
+                <label>Nombre</label>
+                <!-- <input
+                            [ngClass]="{'border-red-500': name.invalid &&  (name.dirty || name.touched)}" -->
+                <input class="border p-2 border-blue-500 rounded-sm bg-transparent focus:outline-none h-fit"
+                    placeholder="type here" type="text">
+                <!-- <div class="text-xs mb-1" *ngIf="name.invalid && (name.dirty || name.touched)">
+        
+                            <div *ngIf="name.errors?.['minlength']">
+                                Nombre debe tener al menos 2 caracteres.
+                            </div>
+        
+                            <div *ngIf="name.errors?.['required']">
+                                El nombre es requerido.
+                            </div>
+                        </div> -->
+            </div>
+
+            <!-- <div [ngClass]="{'text-red-500': name.invalid &&  (name.dirty || name.touched)}" -->
+            <div class="flex flex-col text-blue-500 w-full">
+                <label>Nombre</label>
+                <!-- <input
+                    [ngClass]="{'border-red-500': name.invalid &&  (name.dirty || name.touched)}" -->
+                <input class="border p-2 border-blue-500 rounded-sm bg-transparent focus:outline-none h-fit"
+                    placeholder="type here" type="text">
+                <!-- <div class="text-xs mb-1" *ngIf="name.invalid && (name.dirty || name.touched)">
+
+                    <div *ngIf="name.errors?.['minlength']">
+                        Nombre debe tener al menos 2 caracteres.
+                    </div>
+
+                    <div *ngIf="name.errors?.['required']">
+                        El nombre es requerido.
+                    </div>
+                </div> -->
+            </div>
+
+
+            <div class="flex justify-end gap-2 pt-2">
+
+                <button (click)="open=false" type="submit"
+                    class="bg-blue-800 rounded-sm shadow-element w-[80px] font-semibold h-[29px] text-white">
+                    Aceptar
+                </button>
+                <button (click)="open=false" type="reset"
+                    class="bg-red-600 rounded-sm shadow-element w-[80px] font-semibold h-[29px] text-white">
+                    Cancelar
+                </button>
+            </div>
+        </form>
+    </div>
